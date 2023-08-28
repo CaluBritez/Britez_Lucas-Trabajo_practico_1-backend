@@ -1,5 +1,6 @@
 const Usuario = require('../models/Usuario.js');
 const ctrlUsuario = {};
+const bcrypt = require('bcrypt')
 
 ctrlUsuario.crearUsuario = async (req, res) => {
     const {
@@ -9,9 +10,10 @@ ctrlUsuario.crearUsuario = async (req, res) => {
     } = req.body; // JSON.stringify
 
     try {
+        const hashedPassword = await bcrypt.hash(password, 10);
         const nuevoUsuario = await Usuario.create({
             usuario,
-            password,
+            password:hashedPassword,
             estado
         })
 

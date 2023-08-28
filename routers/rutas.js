@@ -3,12 +3,13 @@ const router = Router();
 const {crearPlaylist, obtenerPlaylists, obtenerPlaylist, actualizarPlaylist, eliminarPlaylist} = require('../controllers/controladores.playlist.js');
 const {crearUsuario} = require('../controllers/controladores.usuarios.js');
 const {crearCancion} = require('../controllers/controladores.canciones.js');
+const { validacion, validarEsquema } = require('../middleware/exp-vali.js');
 
 // ------------------------------------------------------------------------------------
 // ----------------- OPERACIONES USUARIO ---------------------------------------------
 // ------------------------------------------------------------------------------------
 // Crear Usuario
-router.post('/usuario', crearUsuario);
+router.post('/usuario', validacion,validarEsquema,crearUsuario);
 // ------------------------------------------------------------------------------------
 // ----------------- OPERACIONES CANCIONES ---------------------------------------------
 // ------------------------------------------------------------------------------------
