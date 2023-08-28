@@ -14,7 +14,7 @@ router.post('/usuario', validacion,validarEsquema,crearUsuario);
 // ----------------- OPERACIONES CANCIONES ---------------------------------------------
 // ------------------------------------------------------------------------------------
 // Crear Cancion
-router.post('/cancion', crearCancion);
+router.post('/cancion/:id_playlist', crearCancion);
 
 // ------------------------------------------------------------------------------------
 // ----------------- OPERACIONES PLAYLIST ---------------------------------------------
@@ -26,7 +26,7 @@ router.get('/playlist', obtenerPlaylists);
 router.get('/playlist/:id', obtenerPlaylist);
 
 // Crear una Playlist
-router.post('/playlist', crearPlaylist);
+router.post('/playlist/:id_usuario', crearPlaylist);
 
 // Actualizar una playlist
 router.put('/playlist/:id', actualizarPlaylist);

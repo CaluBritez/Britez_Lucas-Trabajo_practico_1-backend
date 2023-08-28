@@ -2,8 +2,8 @@ const Cancion = require('../models/Cancion.js');
 const ctrlCancion = {};
 
 ctrlCancion.crearCancion = async (req, res) => {
+    const {id_playlist} = req.params;
     const {
-        id_playlist,
         artista,
         cancion,
         estado

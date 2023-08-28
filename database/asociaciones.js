@@ -1,6 +1,6 @@
-const Usuario = require("./models/Usuario");
-const Playlist = require("./models/Playlist");
-const Cancion = require("./models/Cancion");
+const Usuario = require("../models/Usuario");
+const Playlist = require("../models/Playlist");
+const Cancion = require("../models/Cancion");
 
 const relaciones = ()=>{
 // Un Usuario a muchas Playlist

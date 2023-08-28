@@ -1,5 +1,5 @@
 // Crear modelo de datos de Usuario
-const { DataTypes, sequelize } = require('../database');
+const { DataTypes, sequelize } = require('../database/database');
 
 const Usuario = sequelize.define('Usuario', {
     id: {

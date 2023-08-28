@@ -1,5 +1,5 @@
 // Crear modelo de datos de Playlist
-const { DataTypes, sequelize } = require('../database');
+const { DataTypes, sequelize } = require('../database/database');
 
 const Playlist = sequelize.define('Playlist', {
     id: {

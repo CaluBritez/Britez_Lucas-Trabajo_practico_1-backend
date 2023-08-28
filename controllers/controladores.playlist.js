@@ -33,8 +33,8 @@ ctrlPlaylist.obtenerPlaylist = async (req, res) => {
 
 // Crear una playlist
 ctrlPlaylist.crearPlaylist = async (req, res) => {
+    const {id_usuario} = req.params;
     const {
-        id_usuario,
         nombre,
         visible,
         estado

@@ -6,8 +6,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Se conecta la Base de Datos
-const { conectar } = require('./database');
-const relaciones = require('./asociaciones');
+const { conectar } = require('./database/database');
+const relaciones = require('./database/asociaciones');
 
 conectar();
 relaciones();
