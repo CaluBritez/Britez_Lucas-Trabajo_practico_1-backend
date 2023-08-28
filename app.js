@@ -1,3 +1,5 @@
+//@ts-check
+
 const express = require('express');
 const morgan = require('morgan');
 require('dotenv').config();
@@ -7,7 +9,10 @@ const port = process.env.PORT || 5000;
 
 // Se conecta la Base de Datos
 const { conectar } = require('./database');
+const relaciones = require('./asociaciones');
+
 conectar();
+relaciones();
 
 // Middlewares
 app.use(morgan('dev'));
